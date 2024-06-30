@@ -1,0 +1,208 @@
+body {
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(111, 130, 149);
+  background-color: #a8b2b324;
+  margin: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F9FA;
+}
+
+.month {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7,minMax(42.8px, 1fr));
+  grid-template-rows: 40px repeat(6, minMax(44px,1fr));
+}
+
+.day {
+  text-align: center;
+  border-left: 1px solid rgb(239, 241, 242);
+  border-bottom: 1px solid rgb(239, 241, 242);
+  padding: 10px 0px 0px 0px;
+}
+
+.day:nth-child(7n) {
+  border-right: 1px solid rgb(239, 241, 242);
+}
+
+.day:nth-child(-n + 7) {
+  border-top: 1px solid rgb(239, 241, 242);
+}
+
+.light-text {
+  color: #c2ced0;
+background: repeating-linear-gradient(
+  45deg,
+  #f7f9fa,
+  #f7f9fa 10px,
+  rgba(255, 255, 255, 0) 10px,
+  rgba(247, 249, 250, 0.5) 20px
+);
+
+}
+
+.calendar {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 9px;
+}
+
+.date-3 {
+  grid-area: 3/2/4/3;
+}
+
+.date-4 {
+  grid-area: 3/3/4/4;
+}
+
+.date-5 {
+  grid-area: 3/4/4/5;
+}
+
+.date-6 {
+  grid-area: 3/5/4/6;
+}
+
+.date-7 {
+  grid-area: 3/6/4/7;
+}
+
+.date-8 {
+  grid-area: 3/7/4/8;
+}
+
+.date-14 {
+  grid-area: 4/6/5/7;
+}
+
+.date-23 {
+  grid-area: 6/1/7/2;
+}
+
+.date-24 {
+  grid-area: 6/2/7/3;
+}
+
+.date-25 {
+  grid-area: 6/3/7/4;
+}
+
+.date-4jul {
+  grid-area: 7/5/8/6;
+}
+
+.date-5jul {
+  grid-area: 7/6/8/7;
+}
+
+.events {
+  text-align: center;
+  border-left: 4px solid;
+  transition: all 0.2s ease-in;
+  margin:2px;
+  padding:0;
+  height:13px;
+  font-size: 10px;
+}
+
+.events:hover {
+  color: white;
+}
+
+.event1 {
+  grid-area: 3 / 2 / 4 / 6;
+  background-color: #ead1ac;
+  color: orange;
+}
+
+.event2 {
+  grid-area: 4 / 6 / 5 / 7;
+  background-color: #e1f3e0;
+  color: #a3da6d;
+}
+
+.event3 {
+  grid-area: 6 / 1 / 7 / 4;
+  background-color: #d9b3ff;
+  color: #9945e7;
+}
+
+.event4 {
+  grid-area: 7 / 5 / 8 / 7;
+  background-color: #b3d9ff;
+  color: #2e86f3;
+}
+
+.event5 {
+  grid-area: 3 / 5 / 4 / 8;
+  background-color: #f5b5b5;
+  color: #9f5f5f;
+  margin-top: 30px;
+}
+
+.event1:hover {
+  background-color: orange;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-left: orange;
+}
+
+.event2:hover {
+  background-color: #a3da6d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-left: #a3da6d;
+}
+
+.event3:hover {
+  background-color: #9945e7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-left: #9945e7;
+}
+
+.event4:hover {
+  background-color: #2e86f3;
+  border-left: #2e86f3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.event5:hover {
+  background-color: #9f5f5f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-left: #9f5f5f;
+}
+
+.font{
+  font-weight: bold;
+}
+@media (min-width:769px) {
+.days{
+  grid-template-columns: repeat(7,minMax(35px, 1fr));
+  grid-template-rows: 40px repeat(6, minMax(35px,1fr));
+}
+.events{
+  padding: 0 20px;
+  margin: 69px 12px 5px 12px;
+  height: 29px;
+  font-size: 16px;
+}
+.event5 {
+  margin-top: 35px;
+}
+}
